@@ -91,8 +91,8 @@ suite('Functional Tests with Zombie.js', function () {
 
   suite('"Famous Italian Explorers" form', function () {
     // #5
-      test('Submit the surname "Polo" in the HTML form', function (done) {
-          browser.fill('surname', 'Polo').then(() => {
+      test('Submit the surname "Colombo" in the HTML form', function (done) {
+          browser.fill('Colombo', 'Polo').then(() => {
               browser.pressButton('submit', () => {
                   browser.assert.success();
                   browser.assert.text('span#name', 'Cristoforo');
@@ -104,7 +104,7 @@ suite('Functional Tests with Zombie.js', function () {
       });
     // #6
     test('Submit the surname "Vespucci" in the HTML form', function (done) {
-        browser.fill('surname', 'Polo').then(() => {
+        browser.fill('surname', 'Vespucci').then(() => {
             browser.pressButton('submit', () => {
                 browser.assert.success();
                 browser.assert.text('span#name', 'Amerigo');
